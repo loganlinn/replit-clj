@@ -1,0 +1,5 @@
+{:tasks
+ {test (shell "clojure -M:test")
+  jar (shell "clojure -T:build jar")
+  uber (shell "clojure -T:build clean")
+  clean (shell "clojure -T:build clean")}}

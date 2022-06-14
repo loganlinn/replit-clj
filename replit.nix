@@ -1,9 +1,8 @@
 { pkgs }: with pkgs; {
     deps = [
-      maven
+      babashka
       clojure
       clojure-lsp
-      babashka
       clj-kondo
     ];
 }
