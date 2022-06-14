@@ -1,0 +1,29 @@
+run = ["clojure", "-M", "main.clj"]
+
+entrypoint = "main.clj"
+
+hidden = [
+"**/*.class", 
+"**/.cpcache",
+"**/.cache",
+"classes",
+]
+
+[env]
+CLJ_CONFIG = "/home/runner/.clojure"
+
+[languages.clojure]
+pattern = "**/*.clj"
+
+[languages.clojure.languageServer]
+start = ["clojure-lsp"]
+
+#[interpreter]
+#command = [
+#    "prybar-clojure",
+#    "-i"
+#]
+
+[nix]
+channel = "stable-21_11"
+# channel = "stable-22_05" # nix error: building nix env: os.Readlink() channel: readlink /home/runner/.nix-defexpr/channels/nixpkgs-stable-22_05: no such file or directory
